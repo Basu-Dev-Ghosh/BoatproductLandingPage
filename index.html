@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="style/index.js"></script>
+    <title>Product landing Page</title>
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <img src="img/Boat-Logo_200x.png" class="logo" alt="">
+        <div class="toggle" id="toggle" onclick="show()">
+            <img src="img/menu.png">
+        </div>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">PRICE</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </nav>
+    <div class="container">
+        <div class="col1">
+            <h1 id="title">bo<span id="letter">A</span>t</h1>
+            <h3 id="text">PLUG INTO NIRAVANA</h3>
+            <a
+                href="https://www.boat-lifestyle.com/collections/bluetooth-wireless-headphones/?utm_source=Google&utm_medium=Search&utm_campaign=SB_Search_Brand_Headphones_India_Sep2020&gclid=CjwKCAjwmK6IBhBqEiwAocMc8upRB0-aPV5pLi7ZCICo-QQRyYLSCaic4olpfKfq96hduEVEMy64ZBoCyQgQAvD_BwE"><button
+                    target="_blank" id="btn">Visit Us</button></a>
+        </div>
+        <div class="col2">
+            <img src="img/boat3.png " id="img1">
+            <div class="change">
+                <img id="img2" onclick="change1()" src="img/boat3.png" alt="">
+                <img id="img3" onclick="change2()" src="img/boat2.png" alt="">
+                <img id="img4" onclick="change3()" src="img/boat1.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    function show() {
+        let btn = document.getElementById("toggle")
+        let nav = document.getElementById("navbar");
+        let im1 = document.getElementById("img1");
+        let im2 = document.getElementById("img2");
+        let im3 = document.getElementById("img3");
+        let im4 = document.getElementById("img4");
+        if (nav.style.height == "0vh") {
+            nav.style.height = "90vh";
+            im1.style.display = "none";
+            im2.style.display = "none";
+            im3.style.display = "none";
+            im4.style.display = "none";
+        }
+        else {
+            nav.style.height = "0vh";
+            setTimeout(() => {
+                im1.style.display = "block";
+                im2.style.display = "block";
+                im3.style.display = "block";
+                im4.style.display = "block";
+            }, 440)
+        }
+
+
+    }
+    function change1() {
+        let nav = document.getElementById("navbar");
+        let heading = document.getElementById("title");
+        let para = document.getElementById("text");
+        let A = document.getElementById("letter");
+        let button = document.getElementById("btn");
+        let im1 = document.getElementById("img1");
+        let togl = document.getElementById("toggle")
+
+
+        document.body.style.backgroundColor = "#fff";
+        nav.style.backgroundColor = "#33629f";
+        togl.style.filter = "invert(0)";
+        heading.style.color = "#000";
+        para.style.color = "#000";
+        A.style.color = "#33629f";
+        button.style.backgroundColor = "#33629f";
+        im1.src = "img/boat3.png"
+
+    }
+    function change2() {
+        let nav = document.getElementById("navbar");
+        let heading = document.getElementById("title");
+        let para = document.getElementById("text");
+        let A = document.getElementById("letter");
+        let button = document.getElementById("btn");
+        let im1 = document.getElementById("img1");
+        let togl = document.getElementById("toggle")
+
+        document.body.style.backgroundColor = "#dd1d1d";
+        nav.style.backgroundColor = "#181919";
+        togl.style.filter = "invert()";
+        heading.style.color = "#fff";
+        para.style.color = "#fff";
+        A.style.color = "#181919";
+        button.style.backgroundColor = "#181919";
+        im1.src = "img/boat2.png"
+
+    }
+    function change3() {
+        let nav = document.getElementById("navbar");
+        let heading = document.getElementById("title");
+        let para = document.getElementById("text");
+        let A = document.getElementById("letter");
+        let button = document.getElementById("btn");
+        let im1 = document.getElementById("img1");
+        let togl = document.getElementById("toggle")
+
+        document.body.style.backgroundColor = "#5ce1e6";
+        nav.style.backgroundColor = "#556170";
+        heading.style.color = "#000";
+        togl.style.filter = "invert(0)";
+        para.style.color = "#000";
+        A.style.color = "#556170";
+        button.style.backgroundColor = "#556170";
+        im1.src = "img/boat1.png"
+    }
+</script>
+
+</html>
